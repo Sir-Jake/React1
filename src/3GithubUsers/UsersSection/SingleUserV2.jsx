@@ -1,0 +1,35 @@
+function SingleUserV2(props) {
+
+  //console.log("Props are", props);
+  const navigate = () => {
+    console.log("Navigating to url", props.url);
+    window.open(props.url, "_blank");
+  };
+
+  //onClick
+
+  function mouseOverCB() {
+    console.log("Mouse over", props.login);
+  }
+
+  return (
+    <div className=" m-2 rounded-md shadow-md" onMouseEnter={mouseOverCB}>
+      <div className="rounded-md">
+        <img className="rounded-md" src={props.avatar_url} />
+      </div>
+      <div className="p-4">
+        <div>
+          Name <b>{props.login}</b>
+        </div>
+        <button
+          onClick={navigate}
+          className="px-4 py-5 rounded-md text-white bg-blue-900 cursor-pointer active: opacity-50"
+        >
+          Github
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default SingleUserV2;
