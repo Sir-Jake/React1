@@ -11,7 +11,7 @@ function UsersSection() {
             <SingleUserV2 
             key = {item.id}
             avatar_url = {item.avatar_url}
-            url = {item.url}
+            url = {item.html_url}
             login = {item.login}
             />
         );

@@ -1,6 +1,6 @@
 function SingleUserV2(props) {
-
   //console.log("Props are", props);
+  
   const navigate = () => {
     console.log("Navigating to url", props.url);
     window.open(props.url, "_blank");
@@ -23,7 +23,7 @@ function SingleUserV2(props) {
         </div>
         <button
           onClick={navigate}
-          className="px-4 py-5 rounded-md text-white bg-blue-900 cursor-pointer active: opacity-50"
+          className="px-4 py-2 rounded-md text-white bg-blue-600 cursor-pointer active: opacity-50"
         >
           Github
         </button>
