@@ -1,6 +1,11 @@
 import { useState } from "react";
-function SearchSection() {
+function SearchSection({page}) {
   const [value, setValue] = useState("");
+
+  if (page !== "find") {
+    return null;
+  }
+
   const handleChange = (e) => {
     setValue(e.target.value);
   };
